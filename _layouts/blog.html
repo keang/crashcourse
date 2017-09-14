@@ -5,7 +5,9 @@ title: "Blog"
 
 {% include intro.html %}
 
-{% for post in paginator.posts %}
+<hr>
+
+{% for post in paginator.posts reversed%}
 
 {% include blog.html %}
 
