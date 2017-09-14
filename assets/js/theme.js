@@ -71,6 +71,7 @@ const updateTheme = (theme) => {
 const checkForSavedTheme = () => {
   const theme = loadSavedTheme()
   if (theme) updateTheme(theme)
+  else updateTheme(LightTheme)
 }
 
 const switchTheme = () => {
