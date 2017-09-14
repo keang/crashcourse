@@ -1,16 +1,14 @@
 ---
 layout: default
-title: "Blog"
 ---
-
 {% include intro.html %}
-
-<hr>
-
-{% for post in paginator.posts reversed%}
-
-{% include blog.html %}
-
-{% endfor %}
-
-{% include post/pagination.html %}
+{% include blog.html post=site.posts.last %}
+<nav class="pagination" role="navigation">
+<hr/>
+<ul>
+  <li class="pagination-item-next">
+    <a rel="next" href="/posts/chapter-2">Next &raquo;</a>
+  </li>
+</ul>
+<hr/>
+</nav>
