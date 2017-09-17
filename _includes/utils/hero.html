@@ -24,11 +24,13 @@ It also needs both :before and :after pseudoclasses to work, that's the only way
 
 {% if post.overlay != nil %}
 
-{% if post.overlay == "red" %}{% assign overlay = "rgba(255,0,100," %}{% endif %}
-{% if post.overlay == "blue" %}{% assign overlay = "rgba(0,100,255," %}{% endif %}
-{% if post.overlay == "green" %}{% assign overlay = "rgba(100,255,0," %}{% endif %}
-{% if post.overlay == "purple" %}{% assign overlay = "rgba(100,0,255," %}{% endif %}
-{% if post.overlay == "orange" %}{% assign overlay = "rgba(255,100,0," %}{% endif %}
+{% if post.overlay == "red" %}{% assign overlay = "rgba(255,47,0," %}{% endif %}
+{% if post.overlay == "blue" %}{% assign overlay = "rgba(0,137,255," %}{% endif %}
+{% if post.overlay == "green" %}{% assign overlay = "rgba(0,255,149," %}{% endif %}
+{% if post.overlay == "purple" %}{% assign overlay = "rgba(169,0,255," %}{% endif %}
+{% if post.overlay == "orange" %}{% assign overlay = "rgba(255,212,0," %}{% endif %}
+{% if post.overlay == "cyan" %}{% assign overlay = "rgba(0,243,255," %}{% endif %}
+{% if post.overlay == "yellow" %}{% assign overlay = "rgba(228,255,0," %}{% endif %}
 
 {% else %}
 {% assign overlay = "rgba(0,0,0,.8)" %}
@@ -72,7 +74,7 @@ It also needs both :before and :after pseudoclasses to work, that's the only way
   .{{ post.url | remove: '/posts/' }}-container,
   .{{ post.url | remove: '/posts/' }}-container::before,
   .{{ post.url | remove: '/posts/' }}-container::after {
-    height: 25rem;
+    height: 10rem;
   }
 
   .{{ post.url | remove: '/posts/' }}-bleed-container,
@@ -85,7 +87,7 @@ It also needs both :before and :after pseudoclasses to work, that's the only way
         .{{ post.url | remove: '/posts/' }}-container,
         .{{ post.url | remove: '/posts/' }}-container::before,
         .{{ post.url | remove: '/posts/' }}-container::after{
-            height: 20rem;
+            height: 10rem;
             margin-bottom: 3rem;
         }
     }
